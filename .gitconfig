@@ -1,0 +1,19 @@
+[user]
+	name = Garubieru
+	email = gabrielmorishita23@gmail.com
+[credential]
+	helper = cache
+	UseHttpPath = true
+[push]
+	default = current
+	followTags = true
+[alias]
+	set-upstream = !git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)
+	c = !git add --all && git commit -m
+	s = !git status -s
+	l = !git log --pretty='%C(blue)[%h]%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	amend = !git add --all && git commit --amend --no-edit
+	count = !git shortlog -s --grep
+	t = !sh -c 'git tag -a $1 -m $1' -
+[core]
+	editor = code --wait
